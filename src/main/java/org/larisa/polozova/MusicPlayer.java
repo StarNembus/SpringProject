@@ -1,11 +1,15 @@
 package org.larisa.polozova;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class MusicPlayer {
     private Music music;
     // внутри конструктора передаем зависимости IoC
+    @Autowired
     public MusicPlayer(Music music) {
         this.music = music;
     }
